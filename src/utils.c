@@ -6,19 +6,19 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:16:25 by nqasem            #+#    #+#             */
-/*   Updated: 2024/12/23 20:17:51 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/11 23:45:11 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_max(char *arr, int *flag, t_node **node)
+static void	check_max(char *arr, int *flag, t_node **node)
 {
 	size_t	sum;
 	long	x;
 
 	sum = 0;
-	x = h_ft_atoi(arr, flag, &sum);
+	x = h_ft_atoi(arr, flag);
 	if ((x > 2147483647 || x < -2147483648) || (sum > 10))
 		*flag = 1;
 	if (!(*flag))
