@@ -6,11 +6,11 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:54:21 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 16:15:21 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/12 16:15:16 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
 void	frees(t_node **root)
 {

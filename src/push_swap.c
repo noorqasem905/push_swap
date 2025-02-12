@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 00:00:10 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/12 15:33:30 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,12 +109,16 @@ int	main(int argc, char *argv[])
 	cur = NULL;
 	flag = 0;
 	if (argc == 1)
+	{
+		error_message(1);
 		return (1);
+	}
 	h_in_pool(&node, &flag, argv);
 	if (flag)
 	{
 		frees(&node);
-		exit(5);
+		error_message(flag);
+		exit(flag);
 	}
 	h_repeat_num(&node);
 	turk(&node, &cur);

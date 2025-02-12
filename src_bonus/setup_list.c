@@ -6,27 +6,35 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:51:16 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:56:06 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/12 18:01:03 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
-int	lstsize(t_node *lst)
+void	set_postion(t_node *lst)
 {
-	int		counter;
-	t_node	*temp;
+	t_node		*nxt;
+	t_node		*first;
+	int			size;
+	int			i;
 
-	while (!lst)
-		return (0);
-	counter = 1;
-	temp = (t_node *)lst;
-	while (temp->next != NULL)
+	nxt = lst;
+	first = lst;
+	size = lstsize(lst);
+	while (lst && size > 1)
 	{
-		temp = temp->next;
-		counter++;
+		i = 0;
+		while (nxt)
+		{
+			if (lst->x > nxt->x)
+				i++;
+			nxt = nxt->next;
+		}
+		lst->pos = ((i) + 1);
+		lst = lst->next;
+		nxt = first;
 	}
-	return (counter);
 }
 
 void	set_values(int *i, int *neg, long *c, int *j)
@@ -90,4 +98,21 @@ void	insertend(t_node **root, long new_value)
 		curr = curr->next;
 	}
 	curr->next = new_node;
+}
+
+int	check_sort(t_node **lst)
+{
+	t_node		*current;
+	int			i;
+
+	current = *lst;
+	i = current->x;
+	while (current && current->next)
+	{
+		if (i != current->pos)
+			return (0);
+		current = current->next;
+		i++;
+	}
+	return (1);
 }

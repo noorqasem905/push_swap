@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 15:06:30 by nqasem            #+#    #+#             */
-/*   Updated: 2025/01/01 14:49:57 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/12 16:32:10 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line.h"
 
 typedef struct s_list
 {
@@ -25,6 +26,7 @@ typedef struct s_list
 }					t_list;
 
 int					ft_toupper(int c);
+int					ft_strcmp(char *s1, char *s2);
 int					word_count(char const *s, char c);
 int					ft_tolower(int c);
 int					ft_isalpha(int c);

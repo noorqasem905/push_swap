@@ -6,11 +6,28 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:16:25 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:28:19 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/02/12 18:16:35 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
+
+int	lstsize(t_node *lst)
+{
+	int		counter;
+	t_node	*temp;
+
+	while (!lst)
+		return (0);
+	counter = 1;
+	temp = (t_node *)lst;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+		counter++;
+	}
+	return (counter);
+}
 
 static void	check_max(char *arr, int *flag, t_node **node)
 {
@@ -76,4 +93,19 @@ void	h_repeat_num(t_node **node)
 		}
 		cur = cur->next;
 	}
+}
+
+void	push(t_node **src, t_node **dest)
+{
+	t_node	*temp;
+
+	if (*src == NULL || !*src)
+	{
+		error_message(1);
+		return ;
+	}
+	temp = *src;
+	*src = (*src)->next;
+	temp->next = *dest;
+	*dest = temp;
 }

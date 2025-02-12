@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 19:42:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:03:23 by nqasem           ###   ########.fr       */
+/*   Created: 2025/02/12 16:31:36 by nqasem            #+#    #+#             */
+/*   Updated: 2025/02/12 18:09:16 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	neg;
-	int	c;
+	size_t	i;
 
-	c = 0;
 	i = 0;
-	neg = 1;
-	while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
-		i++;
-	if (str[i] && (str[i] == '+' || str[i] == '-'))
+	while (s1[i] || s2[i])
 	{
-		if (str[i] == '-')
-			neg *= -1;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	while (str[i] && str[i] <= '9' && str[i] >= '0')
-	{
-		c = (c * 10) + (str[i] - '0');
-		i++;
-	}
-	return (c * neg);
+	return (0);
 }
-/*
-#include <stdio.h>
-int main(){
-printf("%d",ft_atoi("  -154236ab"));
-}*/
