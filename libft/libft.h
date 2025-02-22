@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 15:06:30 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 16:32:10 by nqasem           ###   ########.fr       */
+/*   Updated: 2024/09/02 19:54:17 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ typedef struct s_list
 }					t_list;
 
 int					ft_toupper(int c);
-int					ft_strcmp(char *s1, char *s2);
-int					word_count(char const *s, char c);
 int					ft_tolower(int c);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -35,14 +33,13 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_lstsize(t_list *lst);
+int					ft_strcmp(char *s1, char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *str);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
-size_t				len_num(long num);
 size_t				ft_strlen(const char *s);
-size_t				word_len(char *s, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));

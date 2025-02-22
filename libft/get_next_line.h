@@ -5,27 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 16:23:09 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 16:49:46 by nqasem           ###   ########.fr       */
+/*   Created: 2024/09/14 04:23:39 by yhamdan           #+#    #+#             */
+/*   Updated: 2024/10/07 18:04:51 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/uio.h>
 # include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <stdint.h>
 # include "libft.h"
 
-# define BUFFER_SIZE 1024
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 8
+# endif
 
+char	*ft_strjoin_line(char *s1, char *s2);
 char	*get_next_line(int fd);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *string, int searchedChar );
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t elementCount, size_t elementSize);
-
-size_t	ft_strlen(const char *theString);
+char	*ft_strchr_vline(char *str);
 
 #endif

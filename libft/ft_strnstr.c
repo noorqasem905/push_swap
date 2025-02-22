@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 19:21:51 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:04:30 by nqasem           ###   ########.fr       */
+/*   Updated: 2024/09/01 13:56:08 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // #include <stdio.h>
 // #include <string.h>
 static int	check(size_t p, const char *little, size_t len)
-{
+{	
 	int		le;
 
 	le = ft_strlen(little);
