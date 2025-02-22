@@ -79,7 +79,7 @@ void	h_repeat_num(t_node **node)
 		num = 0;
 		while (cur2)
 		{
-			if ((cur2->x == cur->x))
+			if (cur2->x == cur->x)
 			{
 				if (num > 0)
 				{

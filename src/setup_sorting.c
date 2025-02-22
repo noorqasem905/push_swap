@@ -66,6 +66,7 @@ t_node	*find_the_best(t_node **a_stack, t_node **b_stack)
 	t_node		*check;
 	int			i;
 
+	best = NULL;
 	if ((*b_stack)->pos < (*a_stack)->pos)
 	{
 		i = lstsize(*a_stack);
