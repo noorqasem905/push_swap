@@ -31,7 +31,7 @@ clean:
 	make clean -C libft
 fclean: clean
 	make fclean -C libft
-	rm -f $(NAME)
+	rm -f $(NAME) checker
 re: fclean all
 
 .PHONY: all clean fclean re
