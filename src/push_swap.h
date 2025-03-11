@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 18:21:45 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/11 16:40:01 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
+# include "errno.h"
+
+# define ERO__FILE "Error : unsupported file"
 
 typedef struct node
 {
@@ -45,6 +48,8 @@ void		ft_rx(t_node **b_list, int which);
 void		ft_rr(t_node **a_list, t_node **b_list);
 void		ft_rrx(t_node **list, int which);
 void		ft_rrr(t_node **a_list, t_node **b_list);
+void		sort_five(t_node **a_stack, t_node **b_stack);
+void		sort_five_require(t_node **a_stack, t_node **b_stack, int which);
 void		go_to_best_cost(t_node **stack_b, t_node **stack_a, t_node *best);
 void		push_pop(t_node **src, t_node **dest, int print);
 void		take_movement(t_node **lst, int cost, int which);
@@ -56,7 +61,7 @@ void		setup_calc_cost_a(t_node *a_stack,
 void		set_values(int *i, int *neg, long *c, int *j);
 void		push_to_its_section(t_node **a_stack,
 				t_node **b_stack, t_node *best);
-void		insertend(t_node **root, long new_value);
+void		insertend(t_node **root, long new_value, int *flag);
 void		frees(t_node **root);
 void		h_in_pool(t_node **node, int *flag, char **argv);
 void		h_repeat_num(t_node **node);

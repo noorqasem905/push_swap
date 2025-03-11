@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 18:22:25 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/03 14:26:01 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
+# include "errno.h"
 
 typedef struct node
 {

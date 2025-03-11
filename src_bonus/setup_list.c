@@ -106,7 +106,7 @@ int	check_sort(t_node **lst)
 	int			i;
 
 	current = *lst;
-	i = 1;
+	i = current->pos;
 	while (current && current->next)
 	{
 		if (i != current->pos)

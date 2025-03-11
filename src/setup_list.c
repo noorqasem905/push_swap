@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:51:16 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:56:06 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/03 14:37:08 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ long	h_ft_atoi(const char *str, int *flag)
 	return (c * neg);
 }
 
-void	insertend(t_node **root, long new_value)
+void	insertend(t_node **root, long new_value, int *flag)
 {
 	t_node	*new_node;
 	t_node	*curr;
@@ -74,7 +74,7 @@ void	insertend(t_node **root, long new_value)
 	new_node = malloc(sizeof(t_node));
 	if (new_node == NULL)
 	{
-		exit(99);
+		*flag = ENOMEM;
 		return ;
 	}
 	new_node->x = new_value;

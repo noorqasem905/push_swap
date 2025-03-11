@@ -8,7 +8,8 @@ SRCS =	src/push_swap.c 		\
 		src/handling.c			\
 		src/prepare_sorting.c	\
 		src/setup_list.c		\
-		src/setup_sorting.c
+		src/setup_sorting.c		\
+		src/prepare_sorting_two.c
 SRCS_BONUS = src_bonus/checker_bonus.c	\
 			 src_bonus/utils.c			\
 			 src_bonus/handling.c		\

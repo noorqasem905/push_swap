@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 15:33:30 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/09 18:05:40 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ void	turk(t_node **a_stack, t_node **b_stack)
 		if (!sort_rev(a_stack))
 			sort_three(a_stack);
 	}
+	else if (size_stack == 5 && !is_sort)
+		sort_five(a_stack, b_stack);
 	else
 	{
 		q_sort(a_stack, b_stack);

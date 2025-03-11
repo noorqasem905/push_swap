@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:16:25 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 14:28:19 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/03 14:23:52 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	check_max(char *arr, int *flag, t_node **node)
 	if ((x > 2147483647 || x < -2147483648) || (sum > 10))
 		*flag = 3;
 	if (!(*flag))
-		insertend(node, x);
+		insertend(node, x, flag);
 }
 
 void	h_in_pool(t_node **node, int *flag, char **argv)

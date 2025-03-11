@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:54:21 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 16:15:21 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/03 15:33:15 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,24 @@ void	frees(t_node **root)
 int	error_message(int flag)
 {
 	if (flag == 1)
+		errno = EIO;
+	else if (flag == 2)
+		errno = EIO;
+	else if (flag == 3)
+		errno = ERANGE;
+	else if (flag == 4)
+		errno = ENOMEM;
+	else if (flag == 5)
+		errno = EIO;
+	else
+		errno = EPERM;
+	write(1, "Error\n", 6);
+	return (flag);
+}
+
+/* int	error_message(int flag)
+{
+	if (flag == 1)
 		write(1, "The stack is empty\n", 20);
 	else if (flag == 2)
 		write(1, "Invalid Input\n", 14);
@@ -43,4 +61,4 @@ int	error_message(int flag)
 	else
 		write(1, "Error\n", 7);
 	return (flag);
-}
+} */
