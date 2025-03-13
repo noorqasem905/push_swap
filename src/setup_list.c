@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 23:51:16 by nqasem            #+#    #+#             */
-/*   Updated: 2025/03/03 14:37:08 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/13 22:41:30 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,8 @@ long	h_ft_atoi(const char *str, int *flag)
 	while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
 		i++;
 	if (str[i] && (str[i] == '+' || str[i] == '-'))
-	{
-		if (str[i] == '-')
+		if (str[i++] == '-')
 			neg *= -1;
-		i++;
-	}
 	j = i;
 	while (str[i] && ft_isdigit(str[i]) && !(*flag))
 	{
@@ -61,7 +58,8 @@ long	h_ft_atoi(const char *str, int *flag)
 			j++;
 		i++;
 	}
-	if ((str[i] && !ft_isdigit(str[i])) || i - j > 10)
+	if ((str[i] && !ft_isdigit(str[i])) || i - j > 10 || str[i - 1] == '-'
+		|| str[i - 1] == '+')
 		*flag = ft_isdigit(str[i]) + 2;
 	return (c * neg);
 }

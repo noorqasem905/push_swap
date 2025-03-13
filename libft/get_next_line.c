@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 00:59:00 by yhamdan           #+#    #+#             */
-/*   Updated: 2024/10/07 18:27:49 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/13 18:17:32 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ char	*ft_read(int fd, char *buf)
 		}
 		temp[bytread] = '\0';
 		buf = ft_strjoin(buf, temp);
+		free(temp);
 	}
 	return (buf);
 }

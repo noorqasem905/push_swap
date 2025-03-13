@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 18:08:40 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/13 18:15:03 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,10 @@ int	input(t_node **a_stack, t_node **b_stack)
 		if (check_line(line, a_stack, b_stack))
 		{
 			error_message(99);
+			free(line);
 			return (1);
 		}
+		free(line);
 		line = get_next_line(0);
 	}
 	set_postion(*a_stack);
@@ -71,10 +73,7 @@ int	main(int argc, char *argv[])
 	cur = NULL;
 	flag = 0;
 	if (argc == 1)
-	{
-		error_message(1);
 		return (1);
-	}
 	h_in_pool(&node, &flag, argv);
 	if (flag)
 	{

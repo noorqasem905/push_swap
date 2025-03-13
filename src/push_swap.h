@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/03/11 16:40:01 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/13 22:36:45 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "errno.h"
 
 # define ERO__FILE "Error : unsupported file"
+# define PL " == '+'"
 
 typedef struct node
 {
