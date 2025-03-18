@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:16:25 by nqasem            #+#    #+#             */
-/*   Updated: 2025/02/12 18:16:35 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/18 14:07:26 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,17 +95,15 @@ void	h_repeat_num(t_node **node)
 	}
 }
 
-void	push(t_node **src, t_node **dest)
+int	push(t_node **src, t_node **dest)
 {
 	t_node	*temp;
 
 	if (*src == NULL || !*src)
-	{
-		error_message(1);
-		return ;
-	}
+		return (1);
 	temp = *src;
 	*src = (*src)->next;
 	temp->next = *dest;
 	*dest = temp;
+	return (0);
 }

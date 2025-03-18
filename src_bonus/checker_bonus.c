@@ -6,7 +6,7 @@
 /*   By: nqasem <nqasem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:16:32 by nqasem            #+#    #+#             */
-/*   Updated: 2025/03/13 18:15:03 by nqasem           ###   ########.fr       */
+/*   Updated: 2025/03/18 14:30:29 by nqasem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,25 @@
 int	check_line(char *line, t_node **a_stack, t_node **b_stack)
 {
 	if (!ft_strcmp(line, "sa\n"))
-		sx(a_stack);
+		return (sx(a_stack));
 	else if (!ft_strcmp(line, "sb\n"))
-		sx(b_stack);
+		return (sx(b_stack));
 	else if (!ft_strcmp(line, "pa\n"))
-		push(b_stack, a_stack);
+		return (push(b_stack, a_stack));
 	else if (!ft_strcmp(line, "pb\n"))
-		push(a_stack, b_stack);
+		return (push(a_stack, b_stack));
 	else if (!ft_strcmp(line, "ra\n"))
-		rx(a_stack);
+		return (rx(a_stack));
 	else if (!ft_strcmp(line, "rb\n"))
-		rx(b_stack);
+		return (rx(b_stack));
 	else if (!ft_strcmp(line, "rr\n"))
-		rr(a_stack, b_stack);
+		return (rr(a_stack, b_stack));
 	else if (!ft_strcmp(line, "rra\n"))
-		rrx(a_stack);
+		return (rrx(a_stack));
 	else if (!ft_strcmp(line, "rrb\n"))
-		rrx(b_stack);
+		return (rrx(b_stack));
 	else if (!ft_strcmp(line, "rrr\n"))
-		rrr(a_stack, b_stack);
+		return (rrr(a_stack, b_stack));
 	else
 		return (1);
 	return (0);
